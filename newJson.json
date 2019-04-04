@@ -1,0 +1,14 @@
+{
+"people":[
+  {"firstName":"John","lastName":"Smith","age":"50","city":"London","country":"England"},
+	{"firstName":"Jane","lastName":"Doe","age":"40","city":"Dublin","country":"Ireland"},
+	{"firstName":"Tom","lastName":"Jorgensen","age":"60","city":"New-York","country":"United States"},
+	{"firstName":"Erna","lastName":"Soldberg","age":"50","city":"Oslo","country":"Norway"},
+	{"firstName":"Catherine","lastName":"Middleton","age":"35","city":"Cambridge","country":"England"},
+	{"firstName":"Elizabeth","lastName":"Mary","age":"91","city":"London","country":"England"},
+	{"firstName":"Philip","lastName":"Mountbatten","age":"96","city":"Edinburgh ","country":"England"},
+	{"firstName":"Henry","lastName":"David","age":"33","city":"Cardiff","country":"Wales"},
+	{"firstName":"William","lastName":"Louis","age":"35","city":"Cambridge","country":"England"},
+	{"firstName":"Willem","lastName":"Alexander","age":"50","city":"Amsterdam","country":"Netherlands"}
+]
+}

@@ -1,0 +1,20 @@
+{"recipe":[
+  {"recID":"5",
+    "recName":"Ratatouille",
+    "recGros":"For 8 servings 2 red onions 4 cloves of garlic 2 aubergines 3 courgettes 3 red or yellow peppers 6 ripe tomatoes ½ a bunch of fresh basil (15g)",
+    "howToMake":"123",
+    "recPrice":"12",
+    "recPhoto":"xxx"},
+    {"recID":"6",
+      "recName":"B",
+      "recGros":"123",
+      "howToMake":"123",
+      "recPrice":"12",
+      "recPhoto":"xxx"},
+      {"recID":"7",
+        "recName":"C",
+        "recGros":"123",
+        "howToMake":"123",
+        "recPrice":"12",
+        "recPhoto":"xxx"}
+]}

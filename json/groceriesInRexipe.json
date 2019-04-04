@@ -1,0 +1,8 @@
+
+{
+"groceriesInRecipe":[
+  {"recipeID":"1","groceriesID":"1"},
+  {"recipeID":"1","groceriesID":"2"},
+  {"recipeID":"1","groceriesID":"3"}
+]
+}

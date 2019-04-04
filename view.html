@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> vue inbar shwartz</title>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latet - Aid for life</title>
+
+
+<style>
+h1, h4{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#app{
+
+  width: 100%;
+  padding-left: 10%;
+  padding-right:10%;
+}
+table {
+font-family: 'Open Sans', sans-serif;
+border-collapse: collapse;
+width: 100%;
+text-align: right;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align:left;
+padding: 8px;
+
+}
+
+tr:nth-child(even) {
+background-color: #c0d6f7;
+}
+</style>
+</head>
+<body>
+
+      <h1>vue.js bonus by Inbar Shwartz</h1>
+      <h4>312230600</h4>
+      <div id="app">
+        <label id="s">  Search: </label>
+        <input type="text" v-model="search">
+        <br>
+        <p></p>
+        <table id="myTable">
+
+          <tr>
+            <th> <b>First Name</b> </th>
+            <th> Last Name </th>
+            <th> Age </th>
+            <th> City </th>
+            <th> Country </th>
+          </tr>
+
+          <tr v-for="udata in filterdata">
+            <th>{{udata.firstName}}</th>
+            <th>{{udata.lastName}}</th>
+            <th>{{udata.age}}</th>
+            <th>{{udata.city}}</th>
+            <th>{{udata.country}}</th>
+          </tr>
+        </table>
+        </div>
+  </body>
+
+  <script>
+  var dataURL='newJson.json';
+  var App= new Vue({
+    el: '#app',
+    data:{
+      search: '',
+      userData: []
+    },
+    mounted(){
+            var self = this
+            $.getJSON(dataURL,function(data){
+              self.userData =data.people;
+            });
+          },
+    computed: {
+    filterdata() {
+      return this.userData.filter(udata => {
+        return udata.firstName.toLowerCase().indexOf(this.search.toLowerCase()) > -1 ||
+         udata.lastName.toLowerCase().indexOf(this.search.toLowerCase()) > -1  ||
+         udata.age.toLowerCase().indexOf(this.search.toLowerCase()) > -1 ||
+         udata.city.toLowerCase().indexOf(this.search.toLowerCase()) > -1  ||
+         udata.country.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+      })
+     }
+    }
+  })
+  </script>
+</html>

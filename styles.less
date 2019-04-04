@@ -1,0 +1,669 @@
+@pink-color: #ff6666;
+@fancy-font: 'Playfair Display', serif;
+@regular-font: 'Open Sans', sans-serif;
+@black-color:black;
+@white-color:white;
+
+
+/*-----------Top part of Page--------*/
+.navbartop {
+  margin-top: 10px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* --------LOGO---------------- */
+#myheader :hover:not(.active) {
+ text-decoration: none;
+ color: @pink-color;
+}
+
+#myheader {
+  font-size: 27pt;
+  color: #333;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+#myheader :visited {
+  color: #333
+}
+
+.logo {
+  padding left: 1%;
+  padding-right: 1%;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  /* Set the navbar to fixed position */
+  position: fixed;
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  height: 100px;
+  /* Full width */
+  display: inline;
+  font-family: @fancy-font;
+  z-index: 50;
+
+}
+
+
+/*  ---------SEARCH BAR------------*/
+#searchbar input[type=text] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid grey;
+  width: 80%;
+  font-weight: 200;
+  background: #ffffff;
+  font-family: @regular-font;
+  position: relative;
+  z-index:1000;
+
+}
+
+#searchButton {
+  width: 19%;
+  padding: 10px;
+  background:@black-color;
+  color: white;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+}
+
+
+#searchbar {
+  border-radius: 15px;
+  text-decoration: none;
+  float: right;
+  margin-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  position: fixed;
+  z-index:1000;
+  right:0%;
+
+}
+
+/*------------ Menu Bar----------- */
+
+nav {
+  display: block;
+  text-align: left;
+  position: fixed;
+  top : 75px;
+  background-color: @black-color;
+  /* box-shadow: inset 0 2em .33em -.5em #555; */
+  font-family: @regular-font;
+  width: 100%;
+  z-index: 100;
+  }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbarbuttom li a:hover:not(.active) {
+  text-decoration: none;
+  background-color: @black-color;
+}
+
+.navbarbuttom li>.active {
+  text-decoration: none;
+  background-color: @pink-color;
+  box-shadow: none;
+}
+
+.navbarbuttom a {
+  display: block;
+  background: @black-color;
+  color: #fff;
+  text-decoration: none;
+  padding: .8em 1.8em;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  /*text-shadow: 0 -1px 0 #000;*/
+  position: relative;
+}
+
+.navbarbuttom {
+  vertical-align: top;
+  display: inline-block;
+  box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
+  border-radius: 6px;
+}
+
+.navbarbuttom li {
+  position: relative;
+}
+
+.navbarbuttom>li {
+  float: left;
+  border-bottom: 4px #aaa solid;
+
+  margin-right: 1px;
+}
+
+.navbarbuttom>li>a {
+  margin-bottom: 1px;
+  /* box-shadow: inset 0 2em .33em -.5em #555; */
+}
+
+.navbarbuttom>li:hover, .navbarbuttom>li:hover>a {
+  border-bottom-color: @pink-color;
+}
+
+.navbarbuttom>li:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.navbarbuttom>li:first-child>a {
+  border-radius: 4px 0 0 0;
+}
+
+.navbarbuttom>li:last-child {
+  border-radius: 0 0 4px 0;
+  margin-right: 0;
+}
+
+.navbarbuttom>li:last-child>a {
+  border-radius: 0 4px 0 0;
+}
+
+.navbarbuttom li li a {
+  margin-top: 1px
+}
+
+.navbarbuttom li a:first-child:nth-last-child(2):before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  top: 50%;
+  right: 5px;
+}
+
+/* submenu positioning*/
+.navbarbuttom ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid @pink-color;
+  z-index: 1;
+  left: -99999em;
+}
+
+.navbarbuttom>li:hover>ul {
+  left: auto;
+  padding-top: 5px;
+  min-width: 100%;
+}
+
+.navbarbuttom>li li ul {
+  border-left: 1px solid #fff;
+}
+
+.navbarbuttom>li li:hover>ul {
+  /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+
+/* arrow hover styling */
+.navbarbuttom>li>a:first-child:nth-last-child(2):before {
+  border-top-color: #aaa;
+}
+
+.navbarbuttom>li:hover>a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-bottom-color: @pink-color;
+  margin-top: -5px
+}
+
+.navbarbuttom li li>a:first-child:nth-last-child(2):before {
+  border-left-color: #aaa;
+  margin-top: -5px
+}
+
+.navbarbuttom li li:hover>a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-right-color: @pink-color;
+  right: 10px;
+}
+/* -------------footer---------*/
+.footer {
+  font-family: @regular-font;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: @black-color;
+  color: white;
+  text-align: center;
+  font-size: 9pt;
+}
+
+
+.row {
+  width: 100%;
+}
+
+/* makes them be in the same line*/
+.column {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+.column.side {
+  width: 100%;
+}
+
+.column.middle {
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.recipe {
+  text-align: center;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.recipepicture {
+  text-align: center;
+}
+
+.recipetitle:hover {
+  color: @pink-color;
+}
+
+.recommend {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  padding: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+   text-align: center;
+
+}
+
+.recommendations {
+  font-family: @regular-font;
+  font-weight: 400;
+  /* font-variant: small-caps; */
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 25%);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  align-self: center;
+}
+
+.recent {
+
+  font-family: @regular-font;
+  font-weight: 600;
+  font-size: 25pt;
+  padding-top: 60px;
+  align-content: center;
+   text-align: center;
+   align-self: center;
+   width: 100%;
+   color: @pink-color;
+}
+
+.name {
+
+  font-family: @regular-font;
+  font-size: 15pt;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: @black-color;
+}
+.recommendations img {
+
+  transition: 0.3s;
+
+}
+
+.price{
+  font-size: 14pt;
+  margin-top: 7px;
+}
+
+.recommendations img:hover {
+
+  transform: scale(1.05);
+  opacity: 0.3;
+}
+
+.ils {
+  font-size: 15px;
+}
+
+#welcometext{
+font-family: @regular-font;
+text-align: center;
+font-weight: 400;
+color: white;
+margin: 0;
+position: absolute;
+top: 60%;
+left: 50%;
+font-size: 25pt;
+transform: translate(-50%, -50%);
+
+}
+
+.welcoming{
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/1251179/pexels-photo-1251179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  position: relative;
+}
+
+#showMore{
+
+  font-size: 20pt;
+  color: white;
+  background-color: @black-color;
+  font-family: @regular-font;
+
+
+}
+
+#showMore:hover{
+
+  color: @pink-color;
+}
+
+.showMore{
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+
+}
+
+.userLoginBar{
+  height: 50px;
+  align-content: center;
+  // vertical-align: middle;
+  align-items: center;
+  align-self: center;
+
+}
+.wname{
+  position: relative;
+  font-family: @regular-font;
+  color: white;
+  font-size: 12pt;
+  font-weight: 200;
+  // vertical-align: bottom;
+
+}
+#uploaddatatext{
+
+  font-family: @regular-font;
+  color: @pink-color;
+  font-weight: 200;
+
+  // vertical-align: bottom;
+  font-size: 12pt;
+
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-55%, -55%);
+
+  font-family: @regular-font;
+  background-color: @black-color;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+
+
+
+}
+
+.recommend:hover .middle {
+  opacity: 1;
+}
+
+#livesearch{
+  position: relative;
+  color: @black-color;
+}
+
+#livesearch:a{
+    color: @black-color;
+}
+
+.searchbar{
+  z-index:1000;
+}
+
+#cart{
+  float: right;
+  margin-right: 10px;
+  margin-top: 8px;
+  color: white;
+}
+
+.up{
+  float: right;
+  padding-right: 10px;
+
+}
+
+button{
+  border: none;
+  color: white;
+  background-color: @black-color;
+}
+button:hover{
+color: @pink-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title{
+  padding left:20px;
+  padding-right: 20px;
+  padding: 20px;
+
+  background-color:@black-color;
+  color: white;
+
+  text-align: center;
+
+  font-family: @fancy-font
+}
+
+.tagsMenu{
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 50%);
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+
+    font-family: @regular-font;
+    font-size: 18px;
+}
+
+.container1{
+
+  width: 100%;
+  /* font-variant: small-caps; */
+  font-family: @regular-font;
+  font-size: 14px;
+  margin-top: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+.items{
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-top: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.close{
+
+  opacity: 1;
+}
+
+#myBtn{
+  margin-top: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  // margin: auto;
+  right: 0;
+  margin-left: 60%;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+}
+
+ #myBtn #b  adge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+	background-color: red;
+}
+.badge{
+  background-color: red;
+}
+.notificationsIcon{
+  float: right;
+  margin-right: 15px;
+}
+.UserLoginText{
+  padding-top: 10px;
+  padding-left: 10px;
+}
